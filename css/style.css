@@ -1,0 +1,137 @@
+body{
+  background-color: #9575CD;
+}
+header{
+  width: 100%;
+  height: 70px;
+  background-color: #512DA8;
+}
+.row-content {
+  margin: 0px auto;
+  padding: 10px 0px 10px 0px;
+  align-content: center;
+}
+.sidepanel {
+  height: 100%; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a, .dropdown-btn {
+  padding: 20px 8px 8px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+}
+.sidepanel button{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover, .dropdown-btn:hover  {
+  color: #f1f1f1;
+}
+/* Add an active class to the active dropdown button */
+.active {
+  background-color:#262626;
+  color: white;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 20px;
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  height: auto;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+.searchTerm:focus{
+  color: black;
+}
+.searchButton {
+  width: 40px;
+  height: auto;
+  border: 3px solid black;
+  background: #512DA8;;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.fa-user-circle-o{
+  color:black
+}
+.fa-user-circle-o button{
+  position: absolute;
+  right: 0px;
+  margin-top: -11px;
+  color:black;
+}
+.card-header{
+  background-color:#512DA8;
+}

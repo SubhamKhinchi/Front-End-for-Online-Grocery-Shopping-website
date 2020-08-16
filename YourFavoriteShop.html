@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/YourFavoriteShop.css">
+    
+    <title>Shop Grocery Online</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row row-content">
+                <div class="col-3 col-sm-2">
+                    <div id="mySidepanel" class="sidepanel">
+                        <h2 class="homemenu"><a href="index.html">Home</a></h2>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                        <button class="dropdown-btn">Choose Location <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                            <a href="HomeLocation.html">Home</a>
+                            <a href="ChangeLocation.html">Change</a>
+                        </div>
+
+                        <a href="#">Your Favorite Shop</a>
+                        <a href="AccWithFavShop.html">Account with Favorite Shop</a>
+                        <a href="Deliveries.html">Deliveries</a>
+                        <a href="cart.html">Cart</a>
+                        <button onclick="gotomembershippage()" id="myButton" class="btn btn-warning" >Premium Membership</button>
+                    </div>
+                    
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+                <div class="col-7 col-sm-6" >
+                    <div class="wrap">
+                        <div class="search">
+                           <input type="text" class="searchTerm" placeholder="Search shop/item here....">
+                           <button type="submit" class="searchButton">
+                             <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-sm-1 justify-content-center" >
+                    <a role="button" class="btn" 
+                        data-toggle="tooltip" data-html="true" 
+                        title="<strong>Subham Khinchi</strong> <br> Mob No. : 7060XXXXX
+                        <br> Address: Flat No.-XX, Street-YY, XYZ"
+                        data-placement="bottom"
+                        href="#"><i class="fa fa-user-circle-o fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-content">
+            <h5>List of your Favorite Shops</h5>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div class="card" id="shopno1">
+                    <div class="card-header text-center text-white">
+                        <div class="row align-items-center">
+                            <div class="col-md-11">
+                                    <h4>Shop Name 1</h4>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Available Items</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Add to Cart</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Sugar</th>
+                                        <td>32 Rs/Kg</td>
+                                        <td>
+                                            <div class="input-group">
+                                                
+                                                <button type="button" class=" glyphicon glyphicon-minus quantity1-left-minus btn btn-danger btn-number"  data-type="minus" data-field="-">
+                                                    -
+                                                </button>
+                                                <input id="quantity1"name="quantity1" value="1" min="1" max="100" type="number" />
+                                                <button type="button" class="glyphicon glyphicon-plus quantity1-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    +
+                                                </button><p><strong>Kg</strong></p>
+                                            </div>
+                                            
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="mycheckbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Coalgate Thoothpaste</th>
+                                        <td>87 Rs/200gm Piece</td>
+                                        <td>
+                                            <div class="input-group">
+                                                
+                                                <button type="button" class=" glyphicon glyphicon-minus quantity2-left-minus btn btn-danger btn-number"  data-type="minus" data-field="-">
+                                                    -
+                                                </button>
+                                                <input id="quantity2"name="quantity2" value="1" min="1" max="100" type="number" />
+                                                <button type="button" class="glyphicon glyphicon-plus quantity2-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    +
+                                                </button><p><strong>Piece</strong></p>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="mycheckbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mustard Oil</th>
+                                        <td>85 Rs/Litre</td>
+                                        <td>
+                                            <div class="input-group">
+                                                
+                                                <button type="button" class=" glyphicon glyphicon-minus quantity3-left-minus btn btn-danger btn-number"  data-type="minus" data-field="-">
+                                                    -
+                                                </button>
+                                                <input id="quantity3"name="quantity3" value="1" min="1" max="100" type="number" />
+                                                <button type="button" class="glyphicon glyphicon-plus quantity3-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    +
+                                                </button><p><strong>Litre</strong></p>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="mycheckbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Wheat Powder</th>
+                                        <td>20 Rs/Kg</td>
+                                        <td>
+                                            <div class="input-group">
+                                                
+                                                <button type="button" class=" glyphicon glyphicon-minus quantity4-left-minus btn btn-danger btn-number"  data-type="minus" data-field="-">
+                                                    -
+                                                </button>
+                                                <input type="number" id="quantity4" name="quantity4" value="1" min="1" max="100" type="number" />
+                                                <button type="button" class="glyphicon glyphicon-plus quantity4-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    +
+                                                </button><p><strong>Kg</strong></p>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="mycheckbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>ChickPea</th>
+                                        <td>129 Rs/Kg</td>
+                                        <td>
+                                            <div class="input-group">
+                                                
+                                                <button type="button" class=" glyphicon glyphicon-minus quantity5-left-minus btn btn-danger btn-number"  data-type="minus" data-field="-">
+                                                    -
+                                                </button>
+                                                <input type="number" id="quantity5" name="quantity5" value="1" min="1" max="100" type="number" />
+                                                <button type="button" class="glyphicon glyphicon-plus quantity5-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    +
+                                                </button><p><strong>Kg</strong></p>
+                                            </div>
+                                        </td>
+                                        <td><input type="checkbox" id="mycheckbox"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="cart.html" class="btn btn-warning pull-right btn-lg" type="button">Go to Cart</a>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="YourFavoriteShop.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "350px";
+        }
+
+        /* Set the width of the sidebar to 0 (hide it) */
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } 
+                else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        function gotomembershippage(){
+            window.location.href = "membership.html";
+        }
+</script>
+  
+</body>
+
+</html>

@@ -8,16 +8,183 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     
     <title>Shop Grocery Online</title>
 </head>
 
 <body>
-    
-        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <header>
+        <div class="container">
+            <div class="row row-content">
+                <div class="col-3 col-sm-2">
+                    <div id="mySidepanel" class="sidepanel">
+                        <h2 class="homemenu"><a href="index.html">Home</a></h2>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                        <button class="dropdown-btn">Choose Location <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                            <a href="HomeLocation.html">Home</a>
+                            <a href="ChangeLocation.html">Change</a>
+                        </div>
+
+                        <a href="YourFavoriteShop.html">Your Favorite Shop</a>
+                        <a href="AccWithFavShop.html">Account with Favorite Shop</a>
+                        <a href="Deliveries.html">Deliveries</a>
+                        <a href="cart.html">Cart</a>
+                        <button onclick="gotomembershippage()" id="myButton" class="btn btn-warning" >Premium Membership</button>
+                    </div>
+                    
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+                <div class="col-7 col-sm-6" >
+                    <div class="wrap">
+                        <div class="search">
+                           <input type="text" class="searchTerm" placeholder="Search shop/item here....">
+                           <button type="submit" class="searchButton">
+                             <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-sm-1 justify-content-center" >
+                    <a role="button" class="btn" 
+                        data-toggle="tooltip" data-html="true" 
+                        title="<strong>Subham Khinchi</strong> <br> Mob No. : 7060XXXXX
+                        <br> Address: Flat No.-XX, Street-YY, XYZ"
+                        data-placement="bottom"
+                        href="#"><i class="fa fa-user-circle-o fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row row-content">
+                <h5><strong>Shops near by you </strong></h5></p></br>
+            </div>
+            <div class="row row-content justify-content-center">
+                <div class="col-12 col-sm-8">
+                    <div class="card" id="shopno1">
+                        <h4 class="card-header text-white">Shop Name 1</h4>
+                        <div class="card-body">
+                            <div class="media">
+                                <img class="d-flex mr-3 img-thumbnail align-self-center"
+                                        src="img/groceryoutlet.png" alt="groceryoutlet">
+                                <div class="media-body">
+                                    <div class="d-*-flex flex-row bd-highlight mb-3">
+                                        <div class="p-1 bd-highlight"><strong>Grocery Store</strong></div>
+                                        <div class="p-1 bd-highlight"><strong>Rating:</strong>
+                                            5<i class="fa fa-star"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-*-flex flex-row bd-highlight">
+                                        <div class="p-1 bd-highlight"><strong>Distance:</strong>
+                                        0.5km</div>
+                                        <div class="p-1 bd-highlight"><strong>Contact:</strong>
+                                        9999999</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-content justify-content-center">
+                <div class="col-12 col-sm-8">
+                    <div class="card" id="shopno2">
+                        <h4 class="card-header text-white">Shop Name 2</h4>
+                        <div class="card-body">
+                            <div class="media">
+                                <img class="d-flex mr-3 img-thumbnail align-self-center"
+                                        src="img/fruitstore.jpg" alt="fruitstore">
+                                <div class="media-body">
+                                    <div class="d-*-flex flex-row bd-highlight mb-3">
+                                        <div class="p-1 bd-highlight"><strong>Fruit Store</strong></div>
+                                        <div class="p-1 bd-highlight"><strong>Rating:</strong>
+                                            4.5<i class="fa fa-star"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-*-flex flex-row bd-highlight">
+                                        <div class="p-1 bd-highlight"><strong>Distance:</strong>
+                                        1.0km</div>
+                                        <div class="p-1 bd-highlight"><strong>Contact:</strong>
+                                        8888888</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-content justify-content-center">
+                <div class="col-12 col-sm-8">
+                    <div class="card" id="shopno3">
+                        <h4 class="card-header text-white">Shop Name 3</h4>
+                        <div class="card-body">
+                            <div class="media">
+                                <img class="d-flex mr-3 img-thumbnail align-self-center"
+                                        src="img/fruitstore.jpg" alt="fruitstore">
+                                <div class="media-body">
+                                    <div class="d-*-flex flex-row bd-highlight mb-3">
+                                        <div class="p-1 bd-highlight"><strong>Fruit Store</strong></div>
+                                        <div class="p-1 bd-highlight"><strong>Rating:</strong>
+                                            4.5<i class="fa fa-star"></i>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-*-flex flex-row bd-highlight">
+                                        <div class="p-1 bd-highlight"><strong>Distance:</strong>
+                                        1.0km</div>
+                                        <div class="p-1 bd-highlight"><strong>Contact:</strong>
+                                        8888888</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "350px";
+        }
+
+        /* Set the width of the sidebar to 0 (hide it) */
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } 
+                else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        function gotomembershippage(){
+            window.location.href = "membership.html";
+        }
+    </script>
+  
 </body>
 
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <title>Shop Grocery Online</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row row-content">
+                <div class="col-3 col-sm-2">
+                    <div id="mySidepanel" class="sidepanel">
+                        <h2 class="homemenu"><a href="index.html">Home</a></h2>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                        <button class="dropdown-btn">Choose Location <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-container">
+                            <a href="HomeLocation.html">Home</a>
+                            <a href="ChangeLocation.html">Change</a>
+                        </div>
+
+                        <a href="YourFavoriteShop.html">Your Favorite Shop</a>
+                        <a href="AccWithFavShop.html">Account with Favorite Shop</a>
+                        <a href="Deliveries.html">Deliveries</a>
+                        <a href="#">Cart</a>
+                        <button onclick="gotomembershippage()" id="myButton" class="btn btn-warning" >Premium Membership</button>
+                    </div>
+                    
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+                <div class="col-7 col-sm-6" >
+                    <div class="wrap">
+                        <div class="search">
+                           <input type="text" class="searchTerm" placeholder="Search shop/item here....">
+                           <button type="submit" class="searchButton">
+                             <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-sm-1 justify-content-center" >
+                    <a role="button" class="btn" 
+                        data-toggle="tooltip" data-html="true" 
+                        title="<strong>Subham Khinchi</strong> <br> Mob No. : 7060XXXXX
+                        <br> Address: Flat No.-XX, Street-YY, XYZ"
+                        data-placement="bottom"
+                        href="#"><i class="fa fa-user-circle-o fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-content justify-content-center">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Nothing</strong> has been added to cart yet!.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "350px";
+        }
+
+        /* Set the width of the sidebar to 0 (hide it) */
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } 
+                else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        function gotomembershippage(){
+            window.location.href = "membership.html";
+        }
+    </script>
+  
+</body>
+
+</html>
